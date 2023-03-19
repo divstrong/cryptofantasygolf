@@ -1,0 +1,68 @@
+
+
+body {
+    background: #176e4e url('../img/landerbg.jpg') bottom center no-repeat;
+    height: 100vh !important;
+    /* min-height: 100%; */
+}
+
+#footer {
+    margin-top: 240px;
+}
+
+#footer h2 {
+    text-shadow: 4px 4px 4px #333;
+}
+
+#lander {
+   text-align: center;
+   /* height: 100vh !important; */
+}
+
+#lander a {
+    color: #fff;
+}
+
+#lander a:hover {
+    color: #faf302;
+    text-decoration: none;
+}
+
+#lander form {
+    display:block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#lander img {
+    max-width: 400px;
+}
+
+#lander h1 {
+    color: #faf302;
+}
+
+#lander h2 {
+    color: #fff;
+}
+
+#lander p {
+    color: #fff;
+}
+
+#lander button {
+    max-width: 240px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #176e4e;
+}
+
+#lander .btn-warning {
+    background-color: #faf302 !important;
+}
+
+#lander .btn:hover {
+    background-color: #013315 !important;
+    color: #fff;
+}
