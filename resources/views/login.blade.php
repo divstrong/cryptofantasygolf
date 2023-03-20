@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>CryptoFantasy Golf: Masters Beta 2023</title>
+        <title>Player Login | CryptoFantasyGOLF</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,18 +15,20 @@
     </head>
     <body class="text-center">
         <div class="container" id="lander">
-        <img src="{{ url('/img/logo-full-white.png') }}" alt="CryptoFantasyGolf Logo" class="img-fluid m-5 logo" />
+        <img src="{{ url('/img/logo-full-white.png') }}" alt="CryptoFantasyGolf Logo" class="img-fluid m-5" />
 
             <main class="form-signin" id="lander">
-                <h1>Masters Beta 2023</h1>
-                <p class="mb-4">Add your email if you wants in mang...</p>
-
+                <h3 class="mb-4 yella">Player Entrance</h3>
                 <form>                
                     <div class="form-floating mb-4">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="your@email
+                        <input type="email" class="form-control" name="email" id="email" placeholder="your@email
                         .com">
                         <label for="floatingInput">Email</label>
                     </div>
+                    <div class="form-floating mb-4">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="********">
+                        <label for="floatingInput">Password</label>
+                    </div>                    
                     <!-- <div class="form-floating">
                         <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Password</label>
@@ -37,16 +39,13 @@
                             <input type="checkbox" value="remember-me"> Remember me
                         </label>
                     </div> -->
-                    <button class="w-100 btn btn-lg btn-warning" type="submit">REQUEST INVITE</button>
+                    <button class="w-100 btn btn-lg btn-warning" type="submit">Login</button>
                 </form>
             </main>
 
-            <div class="row" id="footer">
+            <div class="row" id="footer"> 
                 <div class="col-md-12">
-                    <h2 class="m-4">Contests open in <span id="countdown"></span></h2>
-                </div>  
-                <div class="col-md-12">
-                    <a href="#" class="p-2">Rules</a> | <a href="#" class="p-2">Scoring</a> | <a href="#" class="p-2">Enter</a>
+                    <a href="#" class="p-2">Terms</a> | <a href="#" class="p-2">Privacy</a> | <a href="#" class="p-2">Contact</a>
                 </div>                  
             </div>            
 

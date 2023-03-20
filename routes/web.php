@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContestsController;
+use App\Http\Controllers\EventsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('lander');
 });
+
+// Auth
+Route::get('/login', [AuthController::class, 'index']);
+
+
+// Events
+Route::get('/events', [EventsController::class, 'index']);
+Route::get('/events/{slug}', [EventsController::class, 'contests']);
