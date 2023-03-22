@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\ContestsController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\GolfersController;
+use App\Http\Controllers\PlayersController;
 use App\Models\Contests;
 use App\Models\Events;
 use App\Models\Golfers;
@@ -17,6 +18,13 @@ Route::get('/contests', [ContestsController::class, 'indexJSON']);
 Route::post('/contests', [ContestsController::class, 'create']);
 Route::put('/contests/{cid}', [ContestsController::class, 'update']);
 Route::delete('/contests/{cid}', [ContestsController::class, 'delete']);
+
+// Entries
+Route::get('/entries', [ContestsController::class, 'entries']);
+Route::get('/entries/contest/{cid}', [ContestsController::class, 'entriesContest']);
+Route::get('/entry/{eid}', [ContestsController::class, 'entry']);
+Route::post('/entry', [ContestsController::class, 'createEntry']);
+Route::delete('/entry/{eid}', [ContestsController::class, 'deleteEntry']);
 
 
 // Events
@@ -30,6 +38,13 @@ Route::get('/golfers', [GolfersController::class, 'index']);
 Route::post('/golfers', [GolfersController::class, 'create']);
 Route::put('/golfers/{gid}', [GolfersController::class, 'update']);
 Route::delete('/golfers/{gid}', [GolfersController::class, 'delete']);
+
+
+// Players
+Route::get('/players', [PlayersController::class, 'index']);
+Route::post('/players', [PlayersController::class, 'create']);
+Route::put('/players/{pid}', [PlayersController::class, 'update']);
+Route::delete('/players/{pid}', [PlayersController::class, 'delete']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

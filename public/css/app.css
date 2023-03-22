@@ -5,8 +5,11 @@
 
 body {
     background: #176e4e url('../img/landerbg.jpg') bottom center no-repeat;
-    height: 100vh !important;
-    /* min-height: 100%; */
+    min-height: 100%;
+}
+
+#events .card {
+    border: 5px solid #fff;
 }
 
 #events .card:hover {
@@ -60,7 +63,7 @@ body {
     max-width: 400px;
 }
 
-#lander h1 {
+#lander h1, #contests h1, #events h1 {
     color: #faf302;
 }
 

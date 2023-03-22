@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contests extends Model
+class Players extends Model
 {
     use HasFactory;
-    protected $fillable = ['eventID','code','type','entry','prizepool','payouts','description'];        
+    protected $fillable = ['username','password','email','dob','avatar','skill'];        
 
 }

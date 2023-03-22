@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContestsController;
+use App\Http\Controllers\GolfersController;
 use App\Http\Controllers\EventsController;
 
 /*
@@ -22,6 +23,13 @@ Route::get('/', function () {
 
 // Auth
 Route::get('/login', [AuthController::class, 'index']);
+
+
+// Contests
+Route::get('/contests', [ContestsController::class, 'index']);
+Route::get('/contests/{slug}', [ContestsController::class, 'lobby']);
+// Route::get('/contests/{slug}/{cid}', [ContestsController::class, 'contests']);
+Route::get('/contests/{slug}/picks', [ContestsController::class, 'picks']);
 
 
 // Events

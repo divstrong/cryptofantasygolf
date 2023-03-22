@@ -9,14 +9,14 @@ return new class extends Migration
 
     public function up()
     {
-        Schema::create('contests', function (Blueprint $table) {
+        Schema::create('players', function (Blueprint $table) {
             $table->id();
-            $table->integer('eventID');
-            $table->string('type');
-            $table->string('entry');
-            $table->string('prizepool');
-            $table->string('payouts');
-            $table->string('description');
+            $table->string('username');
+            $table->string('password');
+            $table->string('email');
+            $table->string('skill');
+            $table->date('dob');
+            $table->string('avatar');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contests');
+        Schema::dropIfExists('players');
     }
 };

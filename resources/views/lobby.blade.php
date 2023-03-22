@@ -16,17 +16,17 @@
     <body class="text-center">
         <div class="container" id="events">
         <img src="{{ url('/img/logo-full-white.png') }}" alt="CryptoFantasyGolf Logo" class="img-fluid m-5 logo" />
-            <main class="form-signin" id="lander">
-                <h1>Events</h1>
+            <main class="form-signin" id="contests">
+                <h1>Lobby</h1>
+                <h2 class="m-4">Contests open in <span id="countdown"></span></h2>
                 <div class="row text-center">
-                 @if(@$events) 
-                    @foreach (@$events as $e) 
+                 @if(@$contests) 
+                    @foreach (@$contests as $c) 
                         <div class="col-md-4">
                             <div class="card">
-                                <a href="{{ url('/contests') }}">
-                                    <img src="{{ url('img/'.$e->image) }}" class="img-fluid m-4" />
-                                    <span class="m-4">{{ $e->title }}</span>
-                                </a>
+                                <h2 class="m-4">{{ $c->code }}</h2>
+                                <span class="m-4">{{ $c->description }}</span>
+                                <a href="{{ url('/contests') }}" class="btn btn-primary m-4">Enter</a>
                             </div>                                
                         </div>
                     @endforeach
@@ -34,6 +34,7 @@
                 </div>
             </main>
 
-        </div>            
+        </div>          
+        <script src="{{ url('/js/countdown.js') }}" ></script> 
       </body>
 </html>

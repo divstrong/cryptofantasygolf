@@ -19,7 +19,8 @@
 
             <main class="form-signin" id="lander">
                 <h3 class="mb-4 yella">Player Entrance</h3>
-                <form>                
+                <form>           
+                    @csrf     
                     <div class="form-floating mb-4">
                         <input type="email" class="form-control" name="email" id="email" placeholder="your@email
                         .com">
