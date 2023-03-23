@@ -71,13 +71,6 @@ class ContestsController extends Controller
     }
 
     // Show contests
-    public function picks(Request $request, $slug) {
-
-        $golfers = Golfers::all();
-        return view('picks', ['golfers' => $golfers]);
-    }    
-
-    // Show contests
     public function contests(Request $request, $cid) {
         return view('contests');
     }

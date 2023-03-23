@@ -7,7 +7,9 @@ use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\ContestsController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\GolfersController;
+use App\Http\Controllers\PicksController;
 use App\Http\Controllers\PlayersController;
+use App\Http\Controllers\PowerUpsController;
 use App\Models\Contests;
 use App\Models\Events;
 use App\Models\Golfers;
@@ -40,11 +42,24 @@ Route::put('/golfers/{gid}', [GolfersController::class, 'update']);
 Route::delete('/golfers/{gid}', [GolfersController::class, 'delete']);
 
 
+// Picks
+Route::get('/picks', [PicksController::class, 'index']);
+Route::post('/picks', [PicksController::class, 'create']);
+Route::put('/picks/{pid}', [PicksController::class, 'update']);
+Route::delete('/picks/{pid}', [PicksController::class, 'delete']);
+
+
 // Players
 Route::get('/players', [PlayersController::class, 'index']);
 Route::post('/players', [PlayersController::class, 'create']);
 Route::put('/players/{pid}', [PlayersController::class, 'update']);
 Route::delete('/players/{pid}', [PlayersController::class, 'delete']);
+
+// Powerups
+Route::get('/powerups', [PowerUpsController::class, 'index']);
+Route::post('/powerups', [PowerUpsController::class, 'create']);
+Route::put('/powerups/{pid}', [PowerUpsController::class, 'update']);
+Route::delete('/powerups/{pid}', [PowerUpsController::class, 'delete']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

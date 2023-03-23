@@ -35,29 +35,29 @@
 
         </div>         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>        
-        <script type="text/javascript">
+        <script>
             
-            // Set Picks 
-            if (localStorage.getItem("picks")) let picks = localStorage.getItem("picks")
-            else {
-                let picks = [];
-                localStorage.setItem("picks", picks);
-            }
+            // // Set Picks 
+            // if (localStorage.getItem("picks")) let picks = localStorage.getItem("picks")
+            // else {
+            //     let picks = [];
+            //     localStorage.setItem("picks", picks);
+            // }
 
-            let count = (5 - picks.length);
-            $('#count').text(count);
+            // let count = (5 - picks.length);
+            // $('#count').text(count);
 
-            // Listen for picks
-            // $('.pick').click(addPick($(this).data("golferID")));
-            $('.pick').click(alert('farts'));
+            // // Listen for picks
+            // // $('.pick').click(addPick($(this).data("golferID")));
+            // $('.pick').click(alert('farts'));
 
-            function addPick(gid) {
-                let picks = localStorage.getItem("picks");
-                picks.push(gid);
-                localStorage.setItem("picks", picks);
-                let count = (5 - picks.length);
-                $('#count').text(count);
-            }
+            // function addPick(gid) {
+            //     let picks = localStorage.getItem("picks");
+            //     picks.push(gid);
+            //     localStorage.setItem("picks", picks);
+            //     let count = (5 - picks.length);
+            //     $('#count').text(count);
+            // }
         </script>
       </body>
 </html>

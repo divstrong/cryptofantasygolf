@@ -35,3 +35,7 @@ Route::get('/contests/{slug}/picks', [ContestsController::class, 'picks']);
 // Events
 Route::get('/events', [EventsController::class, 'index']);
 Route::get('/events/{slug}', [EventsController::class, 'contests']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

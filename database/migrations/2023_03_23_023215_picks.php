@@ -6,17 +6,15 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
-        Schema::create('password_resets', function (Blueprint $table) {
-            $table->string('email')->index();
-            $table->string('token');
-            $table->timestamp('created_at')->nullable();
+        Schema::create('picks', function (Blueprint $table) {
+            $table->id();
+            $table->integer('contestID');
+            $table->integer('golferID');
+            $table->integer('playerID');
+            $table->integer('powerupID');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('password_resets');
+        Schema::dropIfExists('picks');
     }
+
 };
